@@ -1,0 +1,80 @@
+[2023-12-18 18:43:53+03:00] INFO: Installer API request received {"method":"GET","endpoint":"checkPhpExte[2023-12-1[2023-12-18 18:43:53+03:00] NOTICE: Trying Winter CMS API  
+hod":"GET","endpoint":"checkPhpVersion"} 
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "curl" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Compared PHP version {"installed":"8.1.9","needed":"8.0.2"} 
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "json" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: PHP version requirement met.  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "pdo" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "zip" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "mbstring" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "fileinfo" extension  
+[2023-12-18 18:43:53+03:00] INFO: Winter API request {"method":"GET","uri":"ping"} 
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "openssl" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "gd" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "filter" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "hash" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Checking PHP "dom" extension  
+[2023-12-18 18:43:53+03:00] NOTICE: Required PHP extensions are installed.  
+[2023-12-18 18:43:53+03:00] NOTICE: Response received from Winter CMS API {"response":"pong"} 
+[2023-12-18 18:43:53+03:00] NOTICE: Winter CMS API connection successful.  
+[2023-12-18 18:45:37+03:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-12-18 18:45:37+03:00] NOTICE: Current working directory is writable.  
+[2023-12-18 18:45:37+03:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-12-18 18:45:37+03:00] NOTICE: Check database connection  
+[2023-12-18 18:45:39+03:00] NOTICE: Found 0 table(s) {"tables":""} 
+[2023-12-18 18:45:39+03:00] NOTICE: Database connection established and verified empty  
+[2023-12-18 18:45:43+03:00] INFO: Installer API request received {"method":"POST","endpoint":"downloadWinter"} 
+[2023-12-18 18:45:43+03:00] NOTICE: Try downloading Winter CMS archive  
+[2023-12-18 18:45:43+03:00] NOTICE: Downloading Winter ZIP via cURL {"url":"https://github.com/wintercms/winter/archive/refs/heads/1.2.zip"} 
+[2023-12-18 18:45:45+03:00] NOTICE: Winter CMS ZIP file downloaded {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\winter.zip"} 
+[2023-12-18 18:45:45+03:00] INFO: Installer API request received {"method":"POST","endpoint":"extractWinter"} 
+[2023-12-18 18:45:45+03:00] NOTICE: Begin extracting Winter CMS archive  
+[2023-12-18 18:45:52+03:00] NOTICE: Move subfoldered files into position {"subfolder":"winter-1.2/"} 
+[2023-12-18 18:45:52+03:00] NOTICE: Remove ZIP subfolder {"subfolder":"winter-1.2/"} 
+[2023-12-18 18:45:52+03:00] NOTICE: Make artisan command-line tool executable {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\artisan"} 
+[2023-12-18 18:45:52+03:00] NOTICE: Remove Composer Merge plugin from composer.json if found  
+[2023-12-18 18:45:52+03:00] NOTICE: Found merge plugin in required packages - removing  
+[2023-12-18 18:45:52+03:00] NOTICE: Found merge plugin config in "extra" config definition - removing  
+[2023-12-18 18:45:52+03:00] INFO: Installer API request received {"method":"POST","endpoint":"lockDependencies"} 
+[2023-12-18 18:45:52+03:00] NOTICE: Create Composer instance  
+[2023-12-18 18:45:52+03:00] NOTICE: Set memory limit to 1.5GB  
+[2023-12-18 18:45:52+03:00] NOTICE: Set work directory for Composer {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms"} 
+[2023-12-18 18:45:52+03:00] NOTICE: Create home/cache directory for Composer {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\.composer"} 
+[2023-12-18 18:45:52+03:00] NOTICE: Set home/cache directory for Composer {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\.composer"} 
+[2023-12-18 18:45:52+03:00] NOTICE: Run Composer "update" command - generate only a lockfile  
+[2023-12-18 18:46:06+03:00] NOTICE: Locked Composer packages {"numPackages":119,"lockFile":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\composer.lock"} 
+[2023-12-18 18:46:06+03:00] INFO: Installer API request received {"method":"POST","endpoint":"installDependencies"} 
+[2023-12-18 18:46:06+03:00] NOTICE: Create Composer instance  
+[2023-12-18 18:46:06+03:00] NOTICE: Set memory limit to 1.5GB  
+[2023-12-18 18:46:06+03:00] NOTICE: Set work directory for Composer {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms"} 
+[2023-12-18 18:46:06+03:00] NOTICE: Set home/cache directory for Composer {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\.composer"} 
+[2023-12-18 18:46:06+03:00] NOTICE: Run Composer "install" command - install from lockfile  
+[2023-12-18 18:47:09+03:00] NOTICE: Installed Composer packages {"numPackages":119} 
+[2023-12-18 18:47:09+03:00] INFO: Installer API request received {"method":"POST","endpoint":"setupConfig"} 
+[2023-12-18 18:47:09+03:00] NOTICE: Booting Laravel framework  
+[2023-12-18 18:47:09+03:00] NOTICE: Loading autoloader  
+[2023-12-18 18:47:09+03:00] NOTICE: Bootstrapping kernel  
+[2023-12-18 18:47:10+03:00] NOTICE: Rewriting config {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\config\\app.php"} 
+[2023-12-18 18:47:10+03:00] NOTICE: Rewriting config {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\config\\cms.php"} 
+[2023-12-18 18:47:10+03:00] NOTICE: Rewriting config {"path":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms\\config\\database.php"} 
+[2023-12-18 18:47:10+03:00] INFO: Installer API request received {"method":"POST","endpoint":"runMigrations"} 
+[2023-12-18 18:47:10+03:00] NOTICE: Booting Laravel framework  
+[2023-12-18 18:47:10+03:00] NOTICE: Loading autoloader  
+[2023-12-18 18:47:10+03:00] NOTICE: Bootstrapping kernel  
+[2023-12-18 18:47:10+03:00] NOTICE: Running artisan "config:clear" command  
+[2023-12-18 18:47:11+03:00] NOTICE: Command finished. {"output":"\n   INFO  Configuration cache cleared successfully.  \n\r\n"} 
+[2023-12-18 18:47:11+03:00] NOTICE: Running database migrations  
+[2023-12-18 18:47:26+03:00] NOTICE: Command finished. {"output":"Migrating application and plugins...\r\n\r\n   INFO  Migration table created.  \n\r\n\r\nMigrating System module...\r\n\r\n   INFO  Running migrations.  \n\r\n  2013_10_01_000001_Db_Deferred_Bindings ................................................................ 2,704ms DONE\r\n  2013_10_01_000002_Db_System_Files ....................................................................... 721ms DONE\r\n  2013_10_01_000003_Db_System_Plugin_Versions ............................................................. 300ms DONE\r\n  2013_10_01_000004_Db_System_Plugin_History .............................................................. 710ms DONE\r\n  2013_10_01_000005_Db_System_Settings .................................................................... 226ms DONE\r\n  2013_10_01_000006_Db_System_Parameters .................................................................. 284ms DONE\r\n  2013_10_01_000007_Db_System_Add_Disabled_Flag ............................................................ 65ms DONE\r\n  2013_10_01_000008_Db_System_Mail_Templates .............................................................. 272ms DONE\r\n  2013_10_01_000009_Db_System_Mail_Layouts ................................................................. 85ms DONE\r\n  2014_10_01_000010_Db_Jobs ................................................................................ 40ms DONE\r\n  2014_10_01_000011_Db_System_Event_Logs .................................................................. 452ms DONE\r\n  2014_10_01_000012_Db_System_Request_Logs ................................................................ 108ms DONE\r\n  2014_10_01_000013_Db_System_Sessions .................................................................... 216ms DONE\r\n  2015_10_01_000014_Db_System_Mail_Layout_Rename ........................................................... 54ms DONE\r\n  2015_10_01_000015_Db_System_Add_Frozen_Flag .............................................................. 69ms DONE\r\n  2015_10_01_000016_Db_Cache .............................................................................. 310ms DONE\r\n  2015_10_01_000017_Db_System_Revisions ................................................................... 298ms DONE\r\n  2015_10_01_000018_Db_FailedJobs .......................................................................... 65ms DONE\r\n  2016_10_01_000019_Db_System_Plugin_History_Detail_Text ................................................ 1,075ms DONE\r\n  2016_10_01_000020_Db_System_Timestamp_Fix ............................................................... 714ms DONE\r\n  2017_08_04_121309_Db_Deferred_Bindings_Add_Index_Session ................................................. 14ms DONE\r\n  2017_10_01_000021_Db_System_Sessions_Update ............................................................... 8ms DONE\r\n  2017_10_01_000022_Db_Jobs_FailedJobs_Update ............................................................. 217ms DONE\r\n  2017_10_01_000023_Db_System_Mail_Partials ................................................................ 17ms DONE\r\n  2017_10_23_000024_Db_System_Mail_Layouts_Add_Options_Field ............................................... 32ms DONE\r\n  2021_10_01_000025_Db_Add_Pivot_Data_To_Deferred_Bindings ................................................. 11ms DONE\r\n  2022_08_06_000026_Db_System_Add_App_Birthday_Date ........................................................ 16ms DONE\r\n  2022_10_14_000027_Db_Jobs_FailedJobs_Update ............................................................. 428ms DONE\r\n\r\n\r\nMigrating Backend module...\r\n\r\n   INFO  Running migrations.  \n\r\n  2013_10_01_000001_Db_Backend_Users ...................................................................... 321ms DONE\r\n  2013_10_01_000002_Db_Backend_User_Groups ................................................................. 62ms DONE\r\n  2013_10_01_000003_Db_Backend_Users_Groups ............................................................... 102ms DONE\r\n  2013_10_01_000004_Db_Backend_User_Throttle .............................................................. 117ms DONE\r\n  2014_01_04_000005_Db_Backend_User_Preferences ............................................................ 58ms DONE\r\n  2014_10_01_000006_Db_Backend_Access_Log .................................................................. 59ms DONE\r\n  2014_10_01_000007_Db_Backend_Add_Description_Field ....................................................... 35ms DONE\r\n  2015_10_01_000008_Db_Backend_Add_Superuser_Flag .......................................................... 18ms DONE\r\n  2016_10_01_000009_Db_Backend_Timestamp_Fix ............................................................... 51ms DONE\r\n  2017_10_01_000010_Db_Backend_User_Roles ................................................................. 105ms DONE\r\n  2018_12_16_000011_Db_Backend_Add_Deleted_At ............................................................... 1ms DONE\r\n  2023_02_16_000012_Db_Backend_Add_User_Metadata ........................................................... 13ms DONE\r\n\r\n\r\nMigrating Cms module...\r\n\r\n   INFO  Running migrations.  \n\r\n  2014_10_01_000001_Db_Cms_Theme_Data ..................................................................... 100ms DONE\r\n  2016_10_01_000002_Db_Cms_Timestamp_Fix ................................................................... 31ms DONE\r\n  2017_10_01_000003_Db_Cms_Theme_Logs ...................................................................... 86ms DONE\r\n  2018_11_01_000001_Db_Cms_Theme_Templates ................................................................ 100ms DONE\r\n\r\n\r\nSeeding System module...\r\n\r\n   INFO  Seeded System.  \n\r\n\r\nSeeding Backend module...\r\n\r\n   INFO  Seeded Backend.  \n\r\nMigrating Winter Demo (Winter.Demo) plugin...\r\n\r\n   INFO  Running migrations.  \n\r\n  1.0.1:    First version of Demo ........................................................................... 6ms DONE\r\n\r\n\r\n   INFO  Migration complete.  \n\r\n   INFO  \\Backend\\Database\\Seeds\\DatabaseSeeder reported the following:  \n\r\n    - The following password has been automatically generated for the \"admin\" account: 1BUwG6nqsnSjUuEfDrZDXS\r\n\r\n"} 
+[2023-12-18 18:47:26+03:00] INFO: Installer API request received {"method":"POST","endpoint":"createAdmin"} 
+[2023-12-18 18:47:26+03:00] NOTICE: Booting Laravel framework  
+[2023-12-18 18:47:26+03:00] NOTICE: Loading autoloader  
+[2023-12-18 18:47:26+03:00] NOTICE: Bootstrapping kernel  
+[2023-12-18 18:47:27+03:00] NOTICE: Finding initial admin account  
+[2023-12-18 18:47:27+03:00] NOTICE: Changing admin account to details provided in installation  
+[2023-12-18 18:47:27+03:00] INFO: Installer API request received {"method":"POST","endpoint":"cleanUp"} 
+[2023-12-18 18:47:27+03:00] NOTICE: Removing installation files  
+[2023-12-18 18:47:27+03:00] NOTICE: Removing temporary installation folders  
+[2023-12-18 18:47:37+03:00] NOTICE: Removing core development files  
+[2023-12-18 18:47:37+03:00] NOTICE: Moving files from temporary work directory to final installation path {"workDir":"G:\\OSPanel-5.4.3\\domains\\prformans\\.wintercms","installDir":"G:\\OSPanel-5.4.3\\domains\\prformans"} 
+[2023-12-18 18:47:37+03:00] NOTICE: Removing work directory  
+[2023-12-18 18:47:37+03:00] NOTICE: Installation complete!  

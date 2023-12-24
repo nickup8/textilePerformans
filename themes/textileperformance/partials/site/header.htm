@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% placeholder page_title default %}{{ this.theme.site_name}} - {{ this.page.title }}{% endplaceholder %}</title>
+        {% partial "meta/styles" %}
+        {% partial "meta/seo" %}
+    </head>
+    {% set pageId = this.page.id %}
+    {% set pageTitle = this.page.title %}
+    {% if pageId is empty %}
+        {% set pageId = page.id %}
+    {% endif %}
+    {% if pageTitle is empty %}
+        {% set pageTitle = page.title %}
+    {% endif %}
+    <body class="page-{{ pageId }} layout-{{ this.layout.id }}">
+    <header class="header black_bg">
+			<div class="container">
+				<div class="header_grid">
+					<div class="header_logo">
+						<a class="header_logo_link" href="/">
+							<img
+								src="{{this.theme.logo | media}}"
+								alt="Текстильный перформанс - салон интерьерного текстиля"
+							/>
+						</a>
+					</div>
+					<div class="header_nav">
+						<div class="header_nav_grid">
+							<address class="header_contacts">
+								<div class="header_nav_address_wrapper">
+									<div class="header_nav_address">
+										{{this.theme.address}}
+									</div>
+									<a href="tel:+79871103619" class="header_phone"
+										>{{this.theme.phone}}</a
+									>
+								</div>
+								<div class="social headersocial">
+									<ul class="social_list">
+										<li class="social_item">
+											<a
+												href="https://vk.com/public214757901"
+												target="_blank"
+												class="social_link"
+											>
+												<img src="{{'assets/images/vk_white.svg' | theme}}" alt="vk_white_icon" />
+											</a>
+										</li>
+										<li class="social_item">
+											<a
+												href="https://t.me/s/your_performans"
+												target="_blank"
+												class="social_link"
+											>
+												<img
+													src="{{'assets/images/telegram_white.svg' | theme}}"
+													alt="telegram_white_icon"
+												/>
+											</a>
+										</li>
+										<li class="social_item">
+											<a
+												href="https://wa.me/79871103619"
+												target="_blank"
+												class="social_link"
+											>
+												<img
+													src="{{'assets/images/whatsapp_white.svg' | theme}}"
+													alt="whatsapp_white_icon"
+												/>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</address>
+							<nav class="header_nav">
+								<ul class="header_nav_list">
+									<li class="header_nav_item ">
+										<a href="{{'about' | page}}" class="header_nav_link {% if this.page.id == 'about' %} active {% endif %}">О компании</a>
+									</li>
+									<li class="header_nav_item">
+										<a href="{{'portfolio' | page}}" class="header_nav_link {% if this.page.id == 'portfolio' %} active {% endif %}"
+											>Наши работы</a
+										>
+									</li>
+									<li class="header_nav_item">
+										<a href="{{'services' | page}}" class="header_nav_link {% if this.page.id == 'services' %} active {% endif %}">Услуги</a>
+									</li>
+									<li class="header_nav_item">
+										<a href="{{'contacts' | page}}" class="header_nav_link {% if this.page.id == 'contacts' %} active {% endif %}"
+											>Контакты</a
+										>
+									</li>
+									<li class="header_nav_item">
+										<a
+											href="#"
+											class="header_nav_link button_link button_function"
+											>Заказать замер</a
+										>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>

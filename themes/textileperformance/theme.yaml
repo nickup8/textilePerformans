@@ -1,0 +1,45 @@
+name: 'Текстильный перформанс'
+description: 'Custom theme generated for textileperformance.ru'
+author: 'Николай Сироткин'
+homepage: ''
+code: ''
+form:
+    fields:
+        googleanalytics_id:
+            label: 'Google Analytics ID'
+
+    tabs:
+        stretch: true
+        defaultTab: Главные настройки
+        cssClass: text-blue
+        icons:
+            Общие настройки: icon-gear
+            Контакты: icon-address-card
+
+        fields:
+            site_name:
+                label: Название сайта
+                type: text
+                tab: Общие настройки
+            logo:
+                label: "Логотип"
+                type: mediafinder
+                mode: image
+                imageWidth: 150
+                imageHeight: 150
+                tab: Общие настройки
+            address:
+                label: Адрес
+                type: text
+                tab: Контакты
+            phone:
+                label: Номер телефона
+                type: text
+                comment: "Формат телефона +7 (###) ###-##-##"
+                tab: Контакты
+            email:
+                label: Электронная почта
+                type: email
+                tab: Контакты
+
+
