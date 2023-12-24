@@ -10,7 +10,7 @@ form:
 
     tabs:
         stretch: true
-        defaultTab: Главные настройки
+        defaultTab: Общие настройки
         cssClass: text-blue
         icons:
             Общие настройки: icon-gear
@@ -40,6 +40,21 @@ form:
             email:
                 label: Электронная почта
                 type: email
+                tab: Контакты
+            vkontakte:
+                label: Вконтакте
+                type: text
+                comment: "Ссылка в формате https://vk.com/###########"
+                tab: Контакты
+            telegram:
+                label: Телеграм
+                type: text
+                comment: "Ссылка в формате https://t.me/###########"
+                tab: Контакты
+            whatsapp:
+                label: WhatsApp
+                type: text
+                comment: "Ссылка в формате https://wa.me/###########"
                 tab: Контакты
 
 

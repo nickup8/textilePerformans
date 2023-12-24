@@ -25,6 +25,7 @@ nbproject
 .idea
 .vscode
 _ide_helper.php
+.token
 
 # Other ignores
 .DS_Store
