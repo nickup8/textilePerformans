@@ -1,5 +1,56 @@
 title = "Наши работы"
-url = "/portfolio"
+url = "/portfolio/"
 layout = "default"
 is_hidden = 0
+
+[filterworks]
 ==
+{% set categories = filterworks.categories %}
+
+        <section class="works">
+			<div class="container">
+				<h1 class="h1 works_h1">Наши работы</h1>
+				<div class="works_description">
+					Мы иследуем людей и интерьер, исходя из этого подбираем материалы
+				</div>
+				<div class="works_filter">
+                <form metod="GET" action="{{url('portfolio')}}">
+                    <ul class="works_filter_list">
+
+                            <li class="works_filter_item">
+                            <button type="submit" value="" class="works_filter_link active">Все работы</button>
+                        </li>
+                        {% for category in categories %}
+                            <li class="works_filter_item">
+                                {# Use spaceless tag to remove spaces inside the A tag. #}
+                                        <button name="category" value={{ category.slug }} class="works_filter_link">
+                                            {{ category.title }}
+                                        </button>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </form>
+				</div>
+                {% component 'filterworks' %}
+
+
+
+			</div>
+		</section>
+		<section class="cta cta_home">
+			<div class="container">
+				<div class="cta_grid cta_home_grid">
+					<div class="cta_content">
+						<h2 class="h2 cta_h2">Нет того, что ищите?</h2>
+						<div class="cta_description">
+							Сложно объять категории, которые мы способны реализовать. Смело
+							оставляйте заявку и мы воплотим ваши идеи!
+						</div>
+						<button class="button button_function">Оставить заявку</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+

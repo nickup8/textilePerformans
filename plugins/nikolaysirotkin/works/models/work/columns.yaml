@@ -1,0 +1,15 @@
+columns:
+    title:
+        label: 'Название работы'
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Описание
+        type: text
+    image:
+        label: Изображение
+        type: text
+    is_active:
+        label: Опубликовано
+        type: text

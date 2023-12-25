@@ -1,0 +1,25 @@
+fields:
+    title:
+        label: 'Название работы'
+        span: full
+        type: text
+    description:
+        label: 'Расширенный редактор'
+        size: ''
+        span: full
+        type: richeditor
+    image:
+        label: Изображение
+        mode: file
+        span: auto
+        type: mediafinder
+    is_active:
+        label: Опубликовано
+        span: auto
+        type: checkbox
+    categories:
+        label: Категории
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation

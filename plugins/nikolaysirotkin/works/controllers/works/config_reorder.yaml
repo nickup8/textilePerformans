@@ -1,0 +1,4 @@
+title: Works
+modelClass: NikolaySirotkin\Works\Models\Work
+toolbar:
+    buttons: reorder_toolbar

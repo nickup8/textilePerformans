@@ -1,0 +1,16 @@
+plugin:
+    name: 'nikolaysirotkin.works::lang.plugin.name'
+    description: 'nikolaysirotkin.works::lang.plugin.description'
+    author: 'Nikolay Sirotkin'
+    icon: wn-icon-briefcase
+    replaces: {  }
+navigation:
+    main-menu-item:
+        label: Работы
+        url: /nikolaysirotkin/works/works
+        icon: icon-briefcase
+        sideMenu:
+            side-menu-item:
+                label: Категории
+                url: nikolaysirotkin/works/categories
+                icon: icon-tags

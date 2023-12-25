@@ -3,4 +3,78 @@ url = "/contacts"
 layout = "default"
 is_hidden = 0
 ==
-123
+<div class="contacts_page">
+			<div class="container">
+				<div class="contacts_page_grid">
+					<div class="contacts_page_content">
+						<h1 class="h1 contacts_h1">Контакты</h1>
+						<div class="contacts_page_contacts">
+							<div class="contacts_page_address">
+								<h3 class="h3 contacts_pahe_h3">Адрес</h3>
+								<div class="contacts_page_address_content">
+									Нижний Новгород, ул Максима Горького, 23А
+								</div>
+							</div>
+							<div class="contacts_page_phone">
+								<h3 class="h3 contacts_pahe_h3">Телефон</h3>
+								<a href="" class="contacts_page_addres_link contacts_link phone"
+									>{{ this.theme.phone }}</a
+								>
+							</div>
+							<div class="contacts_page_email">
+								<h3 class="h3 contacts_pahe_h3">Почта</h3>
+								<a href="#" class="contacts_page_addres_link contacts_link"
+									>info@example.com</a
+								>
+							</div>
+							<div class="contacts_page_social">
+								<h3 class="h3 contacts_pahe_h3">Социальные сети</h3>
+								{% partial 'site/social' %}
+							</div>
+						</div>
+						<div class="contacts_page_form">
+							<h2 class="h2 contacts_page_h2">Остались вопросы?</h2>
+							<div class="contacts_page_form_description">
+								<p>
+									В форме ниже, вы сможете задать все свои интересующие вопросы.
+								</p>
+								<p>Мы обязательно перезвоним вам и ответим на них</p>
+							</div>
+							<form class="modal_form">
+								<input
+									class="modal_form_input"
+									type="text"
+									placeholder="Ваше имя"
+								/>
+								<input
+									class="modal_form_input"
+									type="text"
+									placeholder="Ваш номер телефона"
+								/>
+								<textarea
+									class="textarea"
+									placeholder="Ваши вопросы"
+									cols="30"
+									rows="10"
+								></textarea>
+								<div class="form_button">
+									<button class="button button_modal">Отправить</button>
+									<div class="form_button_conf">
+										Нажимая на кнопку, Вы принимаете
+										<a href="#">условия обработки персональных данных</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="contacts_page_map">
+						<script
+							type="text/javascript"
+							charset="utf-8"
+							async
+							src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1758112b51585b51b99cba81d789eddf918d9fd0d983af98e100dbe7e244fe04&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
+						></script>
+					</div>
+				</div>
+			</div>
+		</div>

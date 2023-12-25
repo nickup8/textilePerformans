@@ -216,3 +216,14 @@ if (plug) {
 	// вызываем функцию countdownTimer каждую секунду
 	timerId = setInterval(countdownTimer, 1000);
 }
+
+// phone attributes
+const phones = document.querySelectorAll('.phone');
+
+
+if(phones){
+    phones.forEach((phone) => {
+        let phoneContent = phone.textContent.trim().split(' ').join('').split('(').join('').split(')').join('').split('-').join('');
+        phone.setAttribute('href', `tel:${phoneContent}`);
+    })
+}

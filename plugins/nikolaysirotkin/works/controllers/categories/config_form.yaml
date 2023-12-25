@@ -1,0 +1,10 @@
+name: Categories
+form: $/nikolaysirotkin/works/models/category/fields.yaml
+modelClass: NikolaySirotkin\Works\Models\Category
+defaultRedirect: nikolaysirotkin/works/categories
+create:
+    redirect: 'nikolaysirotkin/works/categories/update/:id'
+    redirectClose: nikolaysirotkin/works/categories
+update:
+    redirect: nikolaysirotkin/works/categories
+    redirectClose: nikolaysirotkin/works/categories

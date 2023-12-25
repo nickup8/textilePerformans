@@ -1,0 +1,58 @@
+{% set works = filterworks.works %}
+{% set categories = filterworks.categories %}
+
+
+
+<div class="works_grid">
+    {% for work in works %}
+        {% if work.is_active == 1 %}
+            <div class="works_content_item">
+                <img
+                        src="{{ work.image | media}}"
+                        alt="Описание из админки"
+                        class="works_content_item_img"
+                    />
+                <div class="works_content_item_text">
+                    <div class="works_content_item_title">{{work.title}}</div>
+                    <div class="works_content_item_description">{{work.description | raw}}</div>
+                </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                    >
+                        <path
+                            d="M22 38C30.8366 38 38 30.8366 38 22C38 13.1634 30.8366 6 22 6C13.1634 6 6 13.1634 6 22C6 30.8366 13.1634 38 22 38Z"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M42.0004 41.9999L33.4004 33.3999"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M28.1622 22.0811H16"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M22.0811 15.9999V28.1621"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+        {% endif %}
+    {% endfor %}
+</div>

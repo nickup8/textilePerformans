@@ -1,0 +1,4 @@
+columns:
+    title:
+        label: 'Название категории'
+        type: text

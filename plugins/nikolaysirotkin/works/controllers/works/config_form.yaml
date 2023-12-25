@@ -1,0 +1,10 @@
+name: Works
+form: $/nikolaysirotkin/works/models/work/fields.yaml
+modelClass: NikolaySirotkin\Works\Models\Work
+defaultRedirect: nikolaysirotkin/works/works
+create:
+    redirect: 'nikolaysirotkin/works/works/update/:id'
+    redirectClose: nikolaysirotkin/works/works
+update:
+    redirect: nikolaysirotkin/works/works
+    redirectClose: nikolaysirotkin/works/works

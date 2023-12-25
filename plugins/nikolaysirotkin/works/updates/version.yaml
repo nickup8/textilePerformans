@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table nikolaysirotkin_works_'
+    - builder_table_create_nikolaysirotkin_works_.php
+1.0.3:
+    - 'Created table nikolaysirotkin_works_category'
+    - builder_table_create_nikolaysirotkin_works_category.php
+1.0.4:
+    - 'Created table nikolaysirotkin_works_works_categories'
+    - builder_table_create_nikolaysirotkin_works_works_categories.php
