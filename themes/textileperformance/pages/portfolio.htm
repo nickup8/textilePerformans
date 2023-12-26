@@ -4,21 +4,32 @@ layout = "default"
 is_hidden = 0
 
 [filterworks]
+
+[builderList]
+modelClass = "NikolaySirotkin\Works\Models\InfoPage"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "headline"
+noRecordsMessage = "Записи не найдены"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
 {% set categories = filterworks.categories %}
+{% set records = builderList.records %}
 
         <section class="works">
 			<div class="container">
-				<h1 class="h1 works_h1">Наши работы</h1>
+				<h1 class="h1 works_h1">{{ records[0].headline }}</h1>
 				<div class="works_description">
-					Мы иследуем людей и интерьер, исходя из этого подбираем материалы
+					{{ records[0].description }}
 				</div>
 				<div class="works_filter">
                 <form metod="GET" action="{{url('portfolio')}}">
                     <ul class="works_filter_list">
 
-                            <li class="works_filter_item">
-                            <button type="submit" value="" class="works_filter_link active">Все работы</button>
+                        <li class="works_filter_item">
+                            <button type="submit" value="" class="works_filter_link active ">Все работы</button>
                         </li>
                         {% for category in categories %}
                             <li class="works_filter_item">
@@ -34,23 +45,18 @@ is_hidden = 0
 				</div>
                 {% component 'filterworks' %}
 
-
-
 			</div>
 		</section>
 		<section class="cta cta_home">
 			<div class="container">
 				<div class="cta_grid cta_home_grid">
 					<div class="cta_content">
-						<h2 class="h2 cta_h2">Нет того, что ищите?</h2>
+						<h2 class="h2 cta_h2">{{ records[0].cta_headline }}</h2>
 						<div class="cta_description">
-							Сложно объять категории, которые мы способны реализовать. Смело
-							оставляйте заявку и мы воплотим ваши идеи!
+							{{ records[0].cta_description }}
 						</div>
-						<button class="button button_function">Оставить заявку</button>
+						<button class="button button_function">{{ records[0].cta_button_text }}</button>
 					</div>
 				</div>
 			</div>
 		</section>
-
-

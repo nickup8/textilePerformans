@@ -1,0 +1,27 @@
+fields:
+    headline:
+        label: 'Заголовок страницы'
+        span: full
+        type: text
+        comment: 'Главный заголовок страницы'
+    description:
+        label: 'Описание страницы'
+        span: full
+        type: text
+tabs:
+    fields:
+        cta_headline:
+            label: 'Заголовок блока призыва к действию'
+            span: full
+            type: text
+            tab: 'Блок призыва к действию'
+        cta_description:
+            label: 'Описание блока призыва к действию'
+            span: full
+            type: text
+            tab: 'Блок призыва к действию'
+        cta_button_text:
+            label: 'Текст кнопки призыва к действию'
+            span: auto
+            type: text
+            tab: 'Блок призыва к действию'

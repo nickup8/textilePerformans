@@ -21,6 +21,7 @@ class Filterworks extends ComponentBase
     {
         $this->works = $this->filterWorks();
         $this->categories = $this->categoryList();
+        $this->category = $this->filterWorks();
     }
 
     protected function filterWorks()
@@ -38,12 +39,17 @@ class Filterworks extends ComponentBase
         return $works;
     }
 
-    public $works;
-
     protected function categoryList()
     {
         $categories = Category::all();
         return $categories;
     }
+
+
+
+
+
+    public $works;
     public $categories;
+    public $category;
 }

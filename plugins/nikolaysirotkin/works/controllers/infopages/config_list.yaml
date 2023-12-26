@@ -1,0 +1,12 @@
+list: $/nikolaysirotkin/works/models/infopage/columns.yaml
+modelClass: NikolaySirotkin\Works\Models\InfoPage
+title: InfoPages
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'nikolaysirotkin/works/infopages/update/:id'

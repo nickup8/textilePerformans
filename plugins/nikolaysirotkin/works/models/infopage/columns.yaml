@@ -1,0 +1,7 @@
+columns:
+    headline:
+        label: 'Заголовок страницы'
+        type: text
+    description:
+        label: 'Описание  страницы'
+        type: text

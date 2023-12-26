@@ -6,10 +6,18 @@ plugin:
     replaces: {  }
 navigation:
     main-menu-item:
-        label: Работы
-        url: /nikolaysirotkin/works/works
+        label: 'Наши Работы'
+        url: nikolaysirotkin/works/infopages
         icon: icon-briefcase
         sideMenu:
+            side-menu-item3:
+                label: Информация
+                url: nikolaysirotkin/works/infopages
+                icon: icon-info
+            side-menu-item2:
+                label: Работы
+                url: nikolaysirotkin/works/works
+                icon: icon-briefcase
             side-menu-item:
                 label: Категории
                 url: nikolaysirotkin/works/categories
