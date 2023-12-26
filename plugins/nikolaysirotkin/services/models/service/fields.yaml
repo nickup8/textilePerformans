@@ -1,0 +1,14 @@
+fields:
+    headline:
+        label: 'Заголовок услуги'
+        span: full
+        type: text
+    image:
+        label: Изображение
+        mode: file
+        span: left
+        type: mediafinder
+    is_active:
+        label: Опубликовано
+        span: right
+        type: switch

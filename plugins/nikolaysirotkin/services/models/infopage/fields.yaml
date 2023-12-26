@@ -1,0 +1,33 @@
+fields:
+    headline:
+        label: 'Заголовок страницы'
+        span: left
+        type: text
+    title_image:
+        label: 'Титульное изображение'
+        mode: file
+        span: right
+        type: mediafinder
+        comment: 'Рекомендуемый размер изображения 1920x800 px'
+    description:
+        label: 'Описание страницы'
+        size: ''
+        span: full
+        type: textarea
+tabs:
+    fields:
+        cta_headline:
+            label: 'Заголовок блока'
+            span: full
+            type: text
+            tab: 'Призыв к действию'
+        cta_description:
+            label: 'Описание блока'
+            span: full
+            type: text
+            tab: 'Призыв к действию'
+        cta_button_text:
+            label: 'Текст кнопки'
+            span: full
+            type: text
+            tab: 'Призыв к действию'

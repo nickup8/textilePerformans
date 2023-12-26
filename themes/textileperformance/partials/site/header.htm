@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% placeholder page_title default %}{{ this.theme.site_name}} - {{ this.page.title }}{% endplaceholder %}</title>
+        <title>{% placeholder page_title default %}{% if this.page.id == 'home' %}{{ this.theme.site_name}} - {{ this.page.title }}{% else %}{{ this.page.title }} - {{ this.theme.site_name}}{% endif %}{% endplaceholder %}</title>
         <link rel="icon" href="{{'assets/images/favicon.png' | theme }}" type="image/x-icon" />
         {% partial "meta/styles" %}
         {% partial "meta/seo" %}

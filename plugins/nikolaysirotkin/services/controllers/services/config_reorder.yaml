@@ -1,0 +1,4 @@
+title: Services
+modelClass: NikolaySirotkin\Services\Models\Service
+toolbar:
+    buttons: reorder_toolbar

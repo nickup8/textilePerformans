@@ -1,0 +1,12 @@
+list: $/nikolaysirotkin/services/models/step/columns.yaml
+modelClass: NikolaySirotkin\Services\Models\Step
+title: Steps
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'nikolaysirotkin/services/steps/update/:id'

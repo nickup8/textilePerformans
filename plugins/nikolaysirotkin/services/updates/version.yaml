@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table nikolaysirotkin_services_infopages'
+    - builder_table_create_nikolaysirotkin_services_infopages.php
+1.0.3:
+    - 'Created table nikolaysirotkin_services_services'
+    - builder_table_create_nikolaysirotkin_services_services.php
+1.0.4:
+    - 'Updated table nikolaysirotkin_services_services'
+    - builder_table_update_nikolaysirotkin_services_services.php
+1.0.5:
+    - 'Created table nikolaysirotkin_services_steps'
+    - builder_table_create_nikolaysirotkin_services_steps.php

@@ -1,0 +1,4 @@
+title: InfoPages
+modelClass: NikolaySirotkin\Services\Models\InfoPage
+toolbar:
+    buttons: reorder_toolbar

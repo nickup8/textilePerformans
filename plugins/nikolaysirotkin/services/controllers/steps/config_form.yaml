@@ -1,0 +1,10 @@
+name: Steps
+form: $/nikolaysirotkin/services/models/step/fields.yaml
+modelClass: NikolaySirotkin\Services\Models\Step
+defaultRedirect: nikolaysirotkin/services/steps
+create:
+    redirect: 'nikolaysirotkin/services/steps/update/:id'
+    redirectClose: nikolaysirotkin/services/steps
+update:
+    redirect: nikolaysirotkin/services/steps
+    redirectClose: nikolaysirotkin/services/steps

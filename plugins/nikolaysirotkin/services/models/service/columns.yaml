@@ -1,0 +1,10 @@
+columns:
+    headline:
+        label: 'Название услуги'
+        type: text
+        searchable: true
+        sortable: true
+    is_active:
+        label: Опубликовано
+        type: switch
+        sortable: true

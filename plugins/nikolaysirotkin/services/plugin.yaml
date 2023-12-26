@@ -1,0 +1,24 @@
+plugin:
+    name: 'nikolaysirotkin.services::lang.plugin.name'
+    description: 'nikolaysirotkin.services::lang.plugin.description'
+    author: 'Nikolay Sirotkin'
+    icon: wn-icon-bank
+    replaces: {  }
+navigation:
+    menu-services-item:
+        label: Услуги
+        url: nikolaysirotkin/services/infopages
+        icon: icon-bank
+        sideMenu:
+            side-menu-item:
+                label: Информация
+                url: nikolaysirotkin/services/infopages
+                icon: icon-info
+            side-menu-item2:
+                label: Услуги
+                url: nikolaysirotkin/services/services
+                icon: icon-bank
+            side-menu-item3:
+                label: 'Этапы работы'
+                url: nikolaysirotkin/services/steps
+                icon: icon-sitemap

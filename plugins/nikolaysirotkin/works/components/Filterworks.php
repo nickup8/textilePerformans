@@ -21,7 +21,7 @@ class Filterworks extends ComponentBase
     {
         $this->works = $this->filterWorks();
         $this->categories = $this->categoryList();
-        $this->category = $this->filterWorks();
+        $this->page['categorySelect'] = Input::get('category');
     }
 
     protected function filterWorks()

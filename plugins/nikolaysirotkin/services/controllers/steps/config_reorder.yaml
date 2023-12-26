@@ -1,0 +1,4 @@
+title: Steps
+modelClass: NikolaySirotkin\Services\Models\Step
+toolbar:
+    buttons: reorder_toolbar

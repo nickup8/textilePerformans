@@ -1,0 +1,11 @@
+columns:
+    title:
+        label: 'Название этапа'
+        type: text
+        searchable: false
+    description:
+        label: 'Описание этапа'
+        type: text
+    id:
+        label: id
+        type: number

@@ -1,0 +1,10 @@
+name: Services
+form: $/nikolaysirotkin/services/models/service/fields.yaml
+modelClass: NikolaySirotkin\Services\Models\Service
+defaultRedirect: nikolaysirotkin/services/services
+create:
+    redirect: 'nikolaysirotkin/services/services/update/:id'
+    redirectClose: nikolaysirotkin/services/services
+update:
+    redirect: nikolaysirotkin/services/services
+    redirectClose: nikolaysirotkin/services/services

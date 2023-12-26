@@ -1,8 +1,6 @@
 {% set works = filterworks.works %}
 {% set categories = filterworks.categories %}
 
-
-
 <div class="works_grid">
     {% for work in works %}
         {% if work.is_active == 1 %}

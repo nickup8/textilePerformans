@@ -1,0 +1,10 @@
+name: InfoPages
+form: $/nikolaysirotkin/services/models/infopage/fields.yaml
+modelClass: NikolaySirotkin\Services\Models\InfoPage
+defaultRedirect: nikolaysirotkin/services/infopages
+create:
+    redirect: 'nikolaysirotkin/services/infopages/update/:id'
+    redirectClose: nikolaysirotkin/services/infopages
+update:
+    redirect: nikolaysirotkin/services/infopages
+    redirectClose: nikolaysirotkin/services/infopages

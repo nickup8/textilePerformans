@@ -1,0 +1,11 @@
+fields:
+    title:
+        label: 'Название этапа'
+        span: full
+        type: text
+        comment: 'Пример: Замер'
+    description:
+        label: 'Описание этапа'
+        size: ''
+        span: full
+        type: textarea
