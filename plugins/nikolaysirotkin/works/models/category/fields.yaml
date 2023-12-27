@@ -10,3 +10,13 @@ fields:
             field: title
             type: slug
         type: text
+    image:
+        label: 'Титульное изображение'
+        mode: file
+        span: auto
+        type: mediafinder
+        comment: 'Будет размещено на главной странице. Рекомендованный размер 1100х440px'
+    image_alt:
+        label: 'Описание титульного изображения'
+        span: auto
+        type: text

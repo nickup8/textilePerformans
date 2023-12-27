@@ -1,0 +1,15 @@
+fields:
+    image:
+        label: 'Логотип партнера'
+        mode: file
+        span: auto
+        type: mediafinder
+        comment: 'Необходимый размер 400x70px'
+    image_alt:
+        label: 'Описание для сео'
+        span: auto
+        type: text
+    is_active:
+        label: Опубликовано
+        span: auto
+        type: switch

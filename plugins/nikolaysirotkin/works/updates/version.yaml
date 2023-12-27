@@ -15,3 +15,6 @@
 1.0.6:
     - 'Updated table nikolaysirotkin_works_infopages'
     - builder_table_update_nikolaysirotkin_works_infopages.php
+1.0.7:
+    - 'Updated table nikolaysirotkin_works_category'
+    - builder_table_update_nikolaysirotkin_works_category.php

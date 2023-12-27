@@ -1,0 +1,10 @@
+name: Leads
+form: $/nikolaysirotkin/about/models/lead/fields.yaml
+modelClass: NikolaySirotkin\About\Models\Lead
+defaultRedirect: nikolaysirotkin/about/leads
+create:
+    redirect: 'nikolaysirotkin/about/leads/update/:id'
+    redirectClose: nikolaysirotkin/about/leads
+update:
+    redirect: nikolaysirotkin/about/leads
+    redirectClose: nikolaysirotkin/about/leads

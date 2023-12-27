@@ -2,62 +2,73 @@ title = "О компании"
 url = "/about"
 layout = "default"
 is_hidden = 0
+
+[builderList]
+modelClass = "NikolaySirotkin\About\Models\Info"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "headline"
+noRecordsMessage = "Записи не найдены"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList builderList2]
+modelClass = "NikolaySirotkin\About\Models\Lead"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "headline"
+noRecordsMessage = "Записи не найдены"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList builderList3]
+modelClass = "NikolaySirotkin\About\Models\Parter"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "image"
+noRecordsMessage = "Записи не найдены"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
+{% set infos = builderList.records %}
+
 
 <div class="services_hero">
 			<img
-				src="./images/ab1.png"
-				alt="Описание из админки"
+				src="{{ infos[0].title_image | media }}"
+				alt="{{ infos[0].title_image_alt }}"
 				class="services_hero_img"
 			/>
 		</div>
 		<section class="services_title">
 			<div class="container">
 				<div class="services_title_grid">
-					<h1 class="h1 servuces_page_h1">О компании</h1>
+					<h1 class="h1 servuces_page_h1">{{ infos[0].headline }}</h1>
 					<div class="services_page_description">
-						Наша компания уже 9 лет успешно работает на рынке текстиля для
-						интерьера. Мы специализируемся на производстве качественных и
-						стильных тканей, штор, подушек, покрывал и других предметов
-						интерьера. Наш опыт и профессионализм позволяют нам производить все
-						товары быстро и качественно, удовлетворяя потребности наших
-						клиентов. Мы гордимся своей репутацией и стремимся к постоянному
-						улучшению нашей продукции. Благодаря нашему опыту и надежным
-						поставщикам мы можем предложить широкий выбор текстиля для
-						интерьера, от классических до современных дизайнов. Мы уверены, что
-						наша продукция сможет украсить любой дом и создать уютную атмосферу.
+						{{ infos[0].description }}
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="aboute_lead" style="background: url(./images/zhana.jpg)">
+{% set leads = builderList2.records %}
+
+<section class="aboute_lead" style="background: url({{leads[0].bg_image | media}})">
 			<div class="container">
 				<div class="aboute_lead_grid">
 					<div class="aboute_lead_content">
-						<h2 class="h2 aboute_lead_h2">Слово от руководителя</h2>
+						<h2 class="h2 aboute_lead_h2">{{ leads[0].headline }}</h2>
 						<div class="aboute_lead_description">
-							Я горжусь тем, что являюсь руководителем салона «Текстильный
-							Перформанс», который уже 9 лет успешно работает на рынке текстиля
-							для интерьера. В наше время, когда дизайн интерьера играет все
-							большую роль в жизни людей, шторы становятся не только
-							функциональным элементом, но и важным дополнением к общему стилю
-							помещения. Наш опыт и профессионализм позволяют нам предлагать
-							широкий выбор тканей и дизайнов, которые помогут создать
-							уникальный стиль для вашего дома или офиса. Наши опытные
-							декораторы помогут вам выбрать оптимальный вариант, учитывая все
-							ваши пожелания и особенности помещения. Мы гарантируем высокое
-							качество наших изделий и быструю доставку. Мы понимаем, что
-							время — это ценный ресурс, поэтому мы выполняем заказы
-							в кратчайшие сроки. Мы стремимся к постоянному улучшению нашей
-							продукции и уверены, что наша продукция сможет украсить любой дом
-							и создать уютную атмосферу.
+							{{ leads[0].description }}
 						</div>
 						<div class="aboute_content_lead_name_wrapper">
 							<div class="aboute_content_lead_name">
-								<h3 class="h3">Нефедова Жанна</h3>
+								<h3 class="h3">{{ leads[0].lead_name }}</h3>
 							</div>
 							<div class="aboute_content_lead_dolzhnost">
-								руководитель салона
+								{{ leads[0].lead_post }}
 							</div>
 						</div>
 					</div>
@@ -73,54 +84,21 @@ is_hidden = 0
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					<!-- Slides -->
-					<div class="swiper-slide">
-						<div class="aboute_slide">
-							<img
-								src="./images/56775ebdb19e2d9385e1909bff46b26a.png"
-								alt="Описание из админки"
-							/>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="aboute_slide">
-							<img
-								src="./images/9c31a18f5265e71a4cfb72bb72073167.png"
-								alt="Описание из админки"
-							/>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="aboute_slide">
-							<img
-								src="./images/9d03320d942244723b4d45b7d0756f9a.png"
-								alt="Описание из админки"
-							/>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="aboute_slide">
-							<img
-								src="./images/fd33939cbc37ef42a82ab8a86274cb65.png"
-								alt="Описание из админки"
-							/>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="aboute_slide">
-							<img
-								src="./images/9c31a18f5265e71a4cfb72bb72073167.png"
-								alt="Описание из админки"
-							/>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="aboute_slide">
-							<img
-								src="./images/9d03320d942244723b4d45b7d0756f9a.png"
-								alt="Описание из админки"
-							/>
-						</div>
-					</div>
+					{% set partners = builderList3.records %}
+					{% for partner in partners %}
+                        {% if partner.is_active == 1 %}
+                            <div class="swiper-slide">
+                                <div class="aboute_slide">
+                                    <img
+                                        src="{{ partner.image | media }}"
+                                        alt="{{ partner.image_alt }}"
+                                    />
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+
 				</div>
 			</div>
 		</section>

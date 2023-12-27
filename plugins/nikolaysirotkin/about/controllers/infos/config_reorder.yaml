@@ -1,0 +1,4 @@
+title: Infos
+modelClass: NikolaySirotkin\About\Models\Info
+toolbar:
+    buttons: reorder_toolbar

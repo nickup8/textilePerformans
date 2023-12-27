@@ -4,10 +4,6 @@ author: 'Николай Сироткин'
 homepage: ''
 code: ''
 form:
-    fields:
-        googleanalytics_id:
-            label: 'Google Analytics ID'
-
     tabs:
         stretch: true
         defaultTab: Общие настройки
@@ -28,6 +24,15 @@ form:
                 imageWidth: 150
                 imageHeight: 150
                 tab: Общие настройки
+            homeDescrition:
+                label: Описание на первом экране главной страницы
+                type: text
+                tab: Общие настройки
+            titleImage:
+                label: Титульное изображение
+                type: mediafinder
+                mode: file
+                comment: Необходимый размер 1920x800px. Нерекомендуемо менять или необходимо подобрать соответствующее изображение
             address:
                 label: Адрес
                 type: text
@@ -56,6 +61,68 @@ form:
                 type: text
                 comment: "Ссылка в формате https://wa.me/###########"
                 tab: Контакты
+            pluseHeadline:
+                label: Заголовок блока преимуществ
+                type: text
+                tab: 3 преимущества компании
+            pluseOneHeadline:
+                label: Заголовок преимущества 1
+                type: text
+                tab: 3 преимущества компании
+                span: left
+            pluseOneIcon:
+                label: Иконка первого преимущества
+                type: mediafinder
+                mode: image
+                comment: Формат иконки .png или .svg с прозрачным фоном.
+                span: right
+                tab: 3 преимущества компании
+            pluseOneDescription:
+                label: Описание преимущества 2
+                type: textarea
+                size: small
+                span: left
+                tab: 3 преимущества компании
+            pluseTwoHeadline:
+                label: Заголовок преимущества 2
+                type: text
+                tab: 3 преимущества компании
+                span: left
+            pluseTwoIcon:
+                label: Иконка второго преимущества
+                type: mediafinder
+                mode: image
+                comment: Формат иконки .png или .svg с прозрачным фоном.
+                span: right
+                tab: 3 преимущества компании
+            pluseTwoDescription:
+                label: Описание преимущества 2
+                type: textarea
+                size: small
+                span: left
+                tab: 3 преимущества компании
+            pluseThreeHeadline:
+                label: Заголовок преимущества 3
+                type: text
+                tab: 3 преимущества компании
+                span: left
+            pluseThreeIcon:
+                label: Иконка третьего преимущества
+                type: mediafinder
+                mode: image
+                comment: Формат иконки .png или .svg с прозрачным фоном.
+                span: right
+                tab: 3 преимущества компании
+            pluseThreeDescription:
+                label: Описание преимущества 3
+                type: textarea
+                size: small
+                span: left
+                tab: 3 преимущества компании
+            googleanalytics_id:
+                label: 'Google Analytics ID'
+                tab: Метрика и аналитика
+
 
 
 

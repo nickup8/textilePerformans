@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table nikolaysirotkin_about_'
+    - builder_table_create_nikolaysirotkin_about_.php
+1.0.3:
+    - 'Updated table nikolaysirotkin_about_'
+    - builder_table_update_nikolaysirotkin_about_info.php
+1.0.4:
+    - 'Updated table nikolaysirotkin_about_info'
+    - builder_table_update_nikolaysirotkin_about_info_2.php
+1.0.5:
+    - 'Updated table nikolaysirotkin_about_info'
+    - builder_table_update_nikolaysirotkin_about_info_3.php
+1.0.6:
+    - 'Created table nikolaysirotkin_about_leads'
+    - builder_table_create_nikolaysirotkin_about_leads.php
+1.0.7:
+    - 'Created table nikolaysirotkin_about_partners'
+    - builder_table_create_nikolaysirotkin_about_partners.php
+1.0.8:
+    - 'Updated table nikolaysirotkin_about_partners'
+    - builder_table_update_nikolaysirotkin_about_partners.php
+1.0.9:
+    - 'Updated table nikolaysirotkin_about_info'
+    - builder_table_update_nikolaysirotkin_about_info_4.php

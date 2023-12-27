@@ -1,0 +1,10 @@
+name: Infos
+form: $/nikolaysirotkin/about/models/info/fields.yaml
+modelClass: NikolaySirotkin\About\Models\Info
+defaultRedirect: nikolaysirotkin/about/infos
+create:
+    redirect: 'nikolaysirotkin/about/infos/update/:id'
+    redirectClose: nikolaysirotkin/about/infos
+update:
+    redirect: nikolaysirotkin/about/infos
+    redirectClose: nikolaysirotkin/about/infos

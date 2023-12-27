@@ -1,0 +1,24 @@
+plugin:
+    name: 'nikolaysirotkin.about::lang.plugin.name'
+    description: 'nikolaysirotkin.about::lang.plugin.description'
+    author: 'Nikolay Sirotkin'
+    icon: wn-icon-barcode
+    replaces: {  }
+navigation:
+    main-menu-item:
+        label: 'О компании'
+        url: nikolaysirotkin/about/infos
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: Информация
+                url: nikolaysirotkin/about/infos
+                icon: icon-info
+            side-menu-item2:
+                label: 'Слово руководителя'
+                url: nikolaysirotkin/about/leads
+                icon: icon-star-o
+            side-menu-item3:
+                label: Партнеры
+                url: nikolaysirotkin/about/partners
+                icon: icon-group

@@ -1,0 +1,24 @@
+fields:
+    headline:
+        label: 'Заголовок блока'
+        span: full
+        type: text
+    description:
+        label: 'Текст от руководителя'
+        size: large
+        span: full
+        type: textarea
+    lead_name:
+        label: 'Фамилия и Имя руководите'
+        span: full
+        type: text
+    lead_post:
+        label: 'Должность руководителя'
+        span: full
+        type: text
+    bg_image:
+        label: 'Фоновое изображение'
+        mode: file
+        span: auto
+        type: mediafinder
+        comment: 'Не рекомендуется изменять. Либо необходимо подобрать подходящее изображение. Размер 1920х800 px'

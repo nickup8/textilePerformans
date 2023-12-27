@@ -1,0 +1,13 @@
+columns:
+    headline:
+        label: Заголовок
+        type: text
+    description:
+        label: Текст
+        type: text
+    lead_name:
+        label: 'Фамилия и Имя руководителя'
+        type: text
+    lead_post:
+        label: Должность
+        type: text

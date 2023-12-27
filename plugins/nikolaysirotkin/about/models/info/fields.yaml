@@ -1,0 +1,41 @@
+fields:
+    headline:
+        label: 'Заголовок страницы'
+        span: full
+        type: text
+    description:
+        label: 'Описание страницы'
+        size: large
+        span: full
+        type: textarea
+    title_image:
+        label: 'Титульное изображение'
+        mode: file
+        span: auto
+        type: mediafinder
+    title_image_alt:
+        label: 'Описание изображения'
+        span: auto
+        type: text
+        comment: 'Опишите, что изображено. Можно добавить ключевые слова'
+tabs:
+    fields:
+        home_text:
+            label: 'Текст для главной страницы'
+            size: large
+            span: full
+            type: richeditor
+            tab: 'Для главной страницы'
+        home_about_images:
+            label: 'Изображения для главной страницы'
+            mode: image
+            imageWidth: '150'
+            imageHeight: '150'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            comment: 'nikolaysirotkin.about::lang.size'
+            tab: 'Для главной страницы'

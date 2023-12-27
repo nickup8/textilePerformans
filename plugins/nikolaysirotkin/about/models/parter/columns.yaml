@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: id
+        type: number
+    image:
+        label: image
+        type: text
+    image_alt:
+        label: image_alt
+        type: text
+    is_active:
+        label: Опубликовано
+        type: switch

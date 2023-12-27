@@ -156,7 +156,7 @@ const swiper2 = new Swiper('.aboute_slider', {
 	spaceBetween: 24,
 	loop: true,
 	autoplay: {
-		delay: 2000,
+		delay: 1000,
 	},
 });
 

@@ -1,0 +1,4 @@
+title: Leads
+modelClass: NikolaySirotkin\About\Models\Lead
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,4 @@
+title: Partners
+modelClass: NikolaySirotkin\About\Models\Parter
+toolbar:
+    buttons: reorder_toolbar
