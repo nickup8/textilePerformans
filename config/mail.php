@@ -37,11 +37,11 @@ return [
         'smtp' => [
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'password' => env('MAIL_PASSWORD'),
+            'password' => env('MAIL_PASSWORD', ''),
             'port' => env('MAIL_PORT', 587),
             'timeout' => null,
             'transport' => 'smtp',
-            'username' => env('MAIL_USERNAME'),
+            'username' => env('MAIL_USERNAME', ''),
         ],
         'ses' => [
             'transport' => 'ses',
@@ -60,7 +60,7 @@ return [
             'transport' => 'sendmail',
         ],
         'log' => [
-            'channel' => env('MAIL_LOG_CHANNEL'),
+            'channel' => env('MAIL_LOG_CHANNEL', null),
             'transport' => 'log',
         ],
         'array' => [
@@ -87,7 +87,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'noreply@example.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'nickup8@yandex.ru'),
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Winter CMS')),
     ],
 ];

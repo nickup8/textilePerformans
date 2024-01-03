@@ -1,112 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% placeholder page_title default %}{% if this.page.id == 'home' %}{{ this.theme.site_name}} - {{ this.page.title }}{% else %}{{ this.page.title }} - {{ this.theme.site_name}}{% endif %}{% endplaceholder %}</title>
-        <link rel="icon" href="{{'assets/images/favicon.png' | theme }}" type="image/x-icon" />
-        {% partial "meta/styles" %}
-        {% partial "meta/seo" %}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            {% placeholder page_title default %}{% if this.page.id == 'home'
+            %}{{ this.theme.site_name}} - {{ this.page.title }}{% else %}{{
+            this.page.title }} - {{ this.theme.site_name}}{% endif %}{%
+            endplaceholder %}
+        </title>
+        <link
+            rel="icon"
+            href="{{'assets/images/favicon.png' | theme }}"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="{{'./assets/libs/animate/animate.min.css' | theme}}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{'./assets/libs/swiper/swiper-bundle.min.css' | theme}}"
+        />
+        <link rel="stylesheet" href="{{'./assets/css/style.css' | theme}}" />
+        {# {% partial "meta/styles" %} #} {% partial "meta/seo" %}
     </head>
-    {% set pageId = this.page.id %}
-    {% set pageTitle = this.page.title %}
-    {% if pageId is empty %}
-        {% set pageId = page.id %}
-    {% endif %}
-    {% if pageTitle is empty %}
-        {% set pageTitle = page.title %}
-    {% endif %}
+    {% set pageId = this.page.id %} {% set pageTitle = this.page.title %} {% if
+    pageId is empty %} {% set pageId = page.id %} {% endif %} {% if pageTitle is
+    empty %} {% set pageTitle = page.title %} {% endif %}
     <body class="page-{{ pageId }} layout-{{ this.layout.id }}">
-    <header class="header black_bg">
-			<div class="container">
-				<div class="header_grid">
-					<div class="header_logo">
-						<a class="header_logo_link" href="/">
-							<img
-								src="{{this.theme.logo | media}}"
-								alt="Текстильный перформанс - салон интерьерного текстиля"
-							/>
-						</a>
-					</div>
-					<div class="header_nav">
-						<div class="header_nav_grid">
-							<address class="header_contacts">
-								<div class="header_nav_address_wrapper">
-									<div class="header_nav_address">
-										{{this.theme.address}}
-									</div>
-									<a href="" class="header_phone phone"
-										>{{this.theme.phone}}</a
-									>
-								</div>
-								<div class="social headersocial">
-									<ul class="social_list">
-										<li class="social_item">
-											<a
-												href="{{this.theme.vkontakte}}"
-												target="_blank"
-												class="social_link"
-											>
-												<img src="{{'assets/images/vk_white.svg' | theme}}" alt="vk_white_icon" />
-											</a>
-										</li>
-										<li class="social_item">
-											<a
-												href="{{this.theme.telegram}}"
-												target="_blank"
-												class="social_link"
-											>
-												<img
-													src="{{'assets/images/telegram_white.svg' | theme}}"
-													alt="telegram_white_icon"
-												/>
-											</a>
-										</li>
-										<li class="social_item">
-											<a
-												href="{{this.theme.whatsapp}}"
-												target="_blank"
-												class="social_link"
-											>
-												<img
-													src="{{'assets/images/whatsapp_white.svg' | theme}}"
-													alt="whatsapp_white_icon"
-												/>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</address>
-							<nav class="header_nav">
-								<ul class="header_nav_list">
-									<li class="header_nav_item ">
-										<a href="{{'about' | page}}" class="header_nav_link {% if this.page.id == 'about' %} active {% endif %}">О компании</a>
-									</li>
-									<li class="header_nav_item">
-										<a href="{{'portfolio' | page}}" class="header_nav_link {% if this.page.id == 'portfolio' %} active {% endif %}"
-											>Наши работы</a
-										>
-									</li>
-									<li class="header_nav_item">
-										<a href="{{'services' | page}}" class="header_nav_link {% if this.page.id == 'services' %} active {% endif %}">Услуги</a>
-									</li>
-									<li class="header_nav_item">
-										<a href="{{'contacts' | page}}" class="header_nav_link {% if this.page.id == 'contacts' %} active {% endif %}"
-											>Контакты</a
-										>
-									</li>
-									<li class="header_nav_item">
-										<a
-											href="#"
-											class="header_nav_link button_link button_function"
-											>Заказать замер</a
-										>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
+        <header class="header black_bg">
+            <div class="container">
+                <div class="header_grid">
+                    <div class="header_logo">
+                        <a class="header_logo_link" href="/">
+                            <img
+                                src="{{this.theme.logo | media}}"
+                                alt="Текстильный перформанс - салон интерьерного текстиля"
+                            />
+                        </a>
+                    </div>
+                    <div class="header_nav">
+                        <div class="header_nav_grid">
+                            <address class="header_contacts">
+                                <div class="header_nav_address_wrapper">
+                                    <div class="header_nav_address">
+                                        {{this.theme.address}}
+                                    </div>
+                                    <a href="" class="header_phone phone"
+                                        >{{this.theme.phone}}</a
+                                    >
+                                </div>
+                                <div class="social headersocial">
+                                    <ul class="social_list">
+                                        <li class="social_item">
+                                            <a
+                                                href="{{this.theme.vkontakte}}"
+                                                target="_blank"
+                                                class="social_link"
+                                            >
+                                                <img
+                                                    src="{{'assets/images/vk_white.svg' | theme}}"
+                                                    alt="vk_white_icon"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li class="social_item">
+                                            <a
+                                                href="{{this.theme.telegram}}"
+                                                target="_blank"
+                                                class="social_link"
+                                            >
+                                                <img
+                                                    src="{{'assets/images/telegram_white.svg' | theme}}"
+                                                    alt="telegram_white_icon"
+                                                />
+                                            </a>
+                                        </li>
+                                        <li class="social_item">
+                                            <a
+                                                href="{{this.theme.whatsapp}}"
+                                                target="_blank"
+                                                class="social_link"
+                                            >
+                                                <img
+                                                    src="{{'assets/images/whatsapp_white.svg' | theme}}"
+                                                    alt="whatsapp_white_icon"
+                                                />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </address>
+                            <nav class="header_nav_nav">
+                                <ul class="header_nav_list">
+                                    <li class="header_nav_item">
+                                        <a
+                                            href="{{'about' | page}}"
+                                            class="header_nav_link {% if this.page.id == 'about' %} active {% endif %}"
+                                            >О компании</a
+                                        >
+                                    </li>
+                                    <li class="header_nav_item">
+                                        <a
+                                            href="{{'portfolio' | page}}"
+                                            class="header_nav_link {% if this.page.id == 'portfolio' %} active {% endif %}"
+                                            >Наши работы</a
+                                        >
+                                    </li>
+                                    <li class="header_nav_item">
+                                        <a
+                                            href="{{'services' | page}}"
+                                            class="header_nav_link {% if this.page.id == 'services' %} active {% endif %}"
+                                            >Услуги</a
+                                        >
+                                    </li>
+                                    <li class="header_nav_item">
+                                        <a
+                                            href="{{'contacts' | page}}"
+                                            class="header_nav_link {% if this.page.id == 'contacts' %} active {% endif %}"
+                                            >Контакты</a
+                                        >
+                                    </li>
+                                    <li class="header_nav_item">
+                                        <a
+                                            href="#"
+                                            class="header_nav_link button_link button_function"
+                                            >Заказать замер</a
+                                        >
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

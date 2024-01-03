@@ -11,7 +11,9 @@ form:
         icons:
             Общие настройки: icon-gear
             Контакты: icon-address-card
-
+            3 преимущества компании: icon-thumbs-up
+            Метрика и аналитика: icon-chart-line
+            CTA блок на главной: icon-magnet
         fields:
             site_name:
                 label: Название сайта
@@ -31,7 +33,7 @@ form:
             titleImage:
                 label: Титульное изображение
                 type: mediafinder
-                mode: file
+                mode: image
                 comment: Необходимый размер 1920x800px. Нерекомендуемо менять или необходимо подобрать соответствующее изображение
             address:
                 label: Адрес
@@ -119,6 +121,23 @@ form:
                 size: small
                 span: left
                 tab: 3 преимущества компании
+            ctaHeadline:
+                label: Заголовок блока
+                type: text
+                tab: CTA блок на главной
+            ctaDescription:
+                label: Описание блока
+                type: textarea
+                tab: CTA блок на главной
+            ctaButtonText:
+                label: Текст кнопки
+                type: text
+                tab: CTA блок на главной
+            ctaBgImage:
+                label: Фоновое изображение
+                type: mediafinder
+                mode: image
+                tab: CTA блок на главной
             googleanalytics_id:
                 label: 'Google Analytics ID'
                 tab: Метрика и аналитика

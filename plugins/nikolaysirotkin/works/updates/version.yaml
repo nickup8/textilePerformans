@@ -18,3 +18,9 @@
 1.0.7:
     - 'Updated table nikolaysirotkin_works_category'
     - builder_table_update_nikolaysirotkin_works_category.php
+1.0.8:
+    - 'Created table nikolaysirotkin_works_home'
+    - builder_table_create_nikolaysirotkin_works_home.php
+1.0.9:
+    - 'Updated table nikolaysirotkin_works_infopages'
+    - builder_table_update_nikolaysirotkin_works_infopages_2.php

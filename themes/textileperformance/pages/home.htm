@@ -22,6 +22,16 @@ noRecordsMessage = "Записи не найдены"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[builderList builderList3]
+modelClass = "NikolaySirotkin\Works\Models\WorkInInterior"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "Записи не найдены"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
 <section class="hero" style="background: url({{ this.theme.titleImage | media }})">
 			<div class="container">
@@ -73,14 +83,15 @@ pageNumber = "{{ :page }}"
 				</div>
 			</div>
 		</section>
+		{% set worksInInteriors = builderList3.records %}
+
 		<section class="portfolio">
 			<div class="container">
 				<div class="portfolio_grid">
 					<div class="portfolio_content">
-						<h2 class="h2">Наши работы в интерьере</h2>
+						<h2 class="h2">{{ worksInInteriors[0].title }}</h2>
 						<div class="portfolio_description">
-							Создаем красоту и уют для вас. Посмотрите все работы и вы поймете,
-							что вы в правильном месте.
+							{{ worksInInteriors[0].description }}
 						</div>
 						<a href="{{'portfolio' | page}}" class="button_text"
 							>Смотреть все работы
@@ -88,41 +99,16 @@ pageNumber = "{{ :page }}"
 								<img src="{{'assets/images/arrow.svg' | theme}}" alt="arrow icon" /> </span
 						></a>
 					</div>
-					<div class="portfolio_item">
+					{% for workInInterior in worksInInteriors[0].works_gallery_home %}
+                        <div class="portfolio_item">
 						<img
 							class="portfolio_item_img"
-							src="./images/1.webp"
-							alt="Закидать ключевые слова"
+							src="{{ workInInterior.path }}"
+							alt="{{ workInInterior.description }}"
 						/>
 					</div>
-					<div class="portfolio_item">
-						<img
-							class="portfolio_item_img"
-							src="./images/2.webp"
-							alt="Закидать ключевые слова"
-						/>
-					</div>
-					<div class="portfolio_item">
-						<img
-							class="portfolio_item_img"
-							src="./images/3.webp"
-							alt="Закидать ключевые слова"
-						/>
-					</div>
-					<div class="portfolio_item">
-						<img
-							class="portfolio_item_img"
-							src="./images/4.webp"
-							alt="Закидать ключевые слова"
-						/>
-					</div>
-					<div class="portfolio_item">
-						<img
-							class="portfolio_item_img"
-							src="./images/5.webp"
-							alt="Закидать ключевые слова"
-						/>
-					</div>
+                    {% endfor %}
+
 				</div>
 			</div>
 		</section>
@@ -153,16 +139,15 @@ pageNumber = "{{ :page }}"
 				</div>
 			</div>
 		</section>
-		<section class="cta cta_home">
+		<section class="cta cta_home" style="background: url({{ this.theme.ctaBgImage | media }}); background-repeat: no-repeat; background-size: cover;">
 			<div class="container">
 				<div class="cta_grid cta_home_grid">
 					<div class="cta_content">
-						<h2 class="h2 cta_h2">Нет того, что ищите?</h2>
+						<h2 class="h2 cta_h2">{{ this.theme.ctaHeadline }}</h2>
 						<div class="cta_description">
-							Сложно объять категории, которые мы способны реализовать. Смело
-							оставляйте заявку и мы воплотим ваши идеи!
+							{{ this.theme.ctaDescription }}
 						</div>
-						<button class="button button_function">Оставить заявку</button>
+						<button class="button button_function">{{ this.theme.ctaButtonText }}</button>
 					</div>
 				</div>
 			</div>

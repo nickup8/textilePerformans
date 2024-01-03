@@ -1,0 +1,25 @@
+fields:
+    title:
+        label: 'Заголовок блока'
+        span: full
+        type: text
+    description:
+        label: 'Описание блока'
+        size: large
+        span: full
+        type: textarea
+tabs:
+    fields:
+        works_gallery_home:
+            label: 'Загрузить изображения'
+            mode: image
+            imageWidth: '150'
+            imageHeight: '150'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            comment: 'Максимальное количество изображений 5 шт'
+            tab: 'Галерея работ для главной страницы'

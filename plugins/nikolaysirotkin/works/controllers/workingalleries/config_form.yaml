@@ -1,0 +1,10 @@
+name: WorkInGalleries
+form: $/nikolaysirotkin/works/models/workininterior/fields.yaml
+modelClass: NikolaySirotkin\Works\Models\WorkInInterior
+defaultRedirect: nikolaysirotkin/works/workingalleries
+create:
+    redirect: 'nikolaysirotkin/works/workingalleries/update/:id'
+    redirectClose: nikolaysirotkin/works/workingalleries
+update:
+    redirect: nikolaysirotkin/works/workingalleries
+    redirectClose: nikolaysirotkin/works/workingalleries

@@ -1,0 +1,4 @@
+title: WorkInGalleries
+modelClass: NikolaySirotkin\Works\Models\WorkInInterior
+toolbar:
+    buttons: reorder_toolbar

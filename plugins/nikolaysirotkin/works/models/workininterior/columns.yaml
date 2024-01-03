@@ -1,0 +1,7 @@
+columns:
+    title:
+        label: 'Заголовок блока'
+        type: text
+    description:
+        label: Описание
+        type: text

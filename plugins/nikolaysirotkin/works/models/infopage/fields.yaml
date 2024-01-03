@@ -25,3 +25,9 @@ tabs:
             span: auto
             type: text
             tab: 'Блок призыва к действию'
+        cta_image:
+            label: 'Фон блока'
+            mode: image
+            span: auto
+            type: mediafinder
+            tab: 'Блок призыва к действию'

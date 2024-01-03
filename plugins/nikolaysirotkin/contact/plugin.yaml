@@ -1,0 +1,6 @@
+plugin:
+    name: 'nikolaysirotkin.contact::lang.plugin.name'
+    description: 'nikolaysirotkin.contact::lang.plugin.description'
+    author: 'Nikolay Sirotkin'
+    icon: wn-icon-envelope
+    replaces: {  }
