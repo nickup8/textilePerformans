@@ -3,8 +3,8 @@
 namespace Nikolaysirotkin\Contact\Components;
 
 use Cms\Classes\ComponentBase;
+use Illuminate\Support\Facades\Mail;
 use Winter\Storm\Support\Facades\Input;
-use Winter\Storm\Support\Facades\Mail;
 
 class ContactForm extends ComponentBase
 {
@@ -18,7 +18,7 @@ class ContactForm extends ComponentBase
 
     public function onSend()
     {
-        $vars = ['name' => Input::get('name'), 'phone' => Input::get('name'), 'content' => Input::get('textarea')];
+        $vars = ['name' => Input::get('name'), 'phone' => Input::get('name')];
 
         Mail::send('nikolaysirotkin.contact::mail.message', $vars, function ($message) {
 

@@ -13,6 +13,8 @@ return [
     |
     */
 
+    // 'MAIL_MAILER',
+
     'default' => env('MAIL_MAILER', 'smtp'),
 
     /*
@@ -33,15 +35,23 @@ return [
     |
     */
 
+    'driver' => 'smtp',
+    'host' => 'smtp.yandex.ru',
+    'port' => 993,
+    'username' => 'nickup8@yandex.ru',
+    'password' => 'xzbvyhoklncisrtk',
+
+
+
     'mailers' => [
         'smtp' => [
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'password' => env('MAIL_PASSWORD', ''),
-            'port' => env('MAIL_PORT', 587),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+            'host' => env('MAIL_HOST', 'smtp.yandex.ru'),
+            'password' => env('MAIL_PASSWORD', 'xzbvyhoklncisrtk'),
+            'port' => env('MAIL_PORT', 993),
             'timeout' => null,
             'transport' => 'smtp',
-            'username' => env('MAIL_USERNAME', ''),
+            'username' => env('MAIL_USERNAME', 'nickup8@yandex.ru'),
         ],
         'ses' => [
             'transport' => 'ses',
