@@ -36,7 +36,7 @@ pageNumber = "{{ :page }}"
 {% set infos = builderList.records %}
 
 
-<div class="services_hero">
+<div class="services_hero animate__animated animate__zoomIn">
 			<img
 				src="{{ infos[0].title_image | media }}"
 				alt="{{ infos[0].title_image_alt }}"
@@ -74,7 +74,11 @@ pageNumber = "{{ :page }}"
 					</div>
 				</div>
 			</div>
+
 		</section>
+        <div class="mobile_image_lead">
+                <img src="" alt="123">
+            </div>
 
 		<section class="aboute_slider_section">
 			<div class="container">

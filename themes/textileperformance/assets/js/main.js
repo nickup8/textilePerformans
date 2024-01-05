@@ -75,7 +75,6 @@ window.addEventListener("DOMContentLoaded", () => {
             const worksItemsArrey = [].slice.call(worksItems);
             sliderWorksPage.classList.add("active");
             worksItemsArrey.map((workItemNode, indexItemNode) => {
-
                 workSliderWrapper.insertAdjacentHTML(
                     "beforeend",
                     `<div class="swiper-slide slider_works_slide">
@@ -122,12 +121,13 @@ window.addEventListener("DOMContentLoaded", () => {
                         prevEl: ".slider_button_prev",
                     },
                 });
-                let buttunSlider = document.querySelectorAll('.slider_button_cta');
+                let buttunSlider =
+                    document.querySelectorAll(".slider_button_cta");
                 buttunSlider.forEach((btn) => {
-                    btn.addEventListener('click', () => {
-                        console.log("Clicked ")
-                    })
-                })
+                    btn.addEventListener("click", () => {
+                        console.log("Clicked ");
+                    });
+                });
             });
         });
     });
@@ -277,55 +277,102 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     // mobile menu
-    document.querySelectorAll(".menu").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-            btn.classList.toggle("active");
-        });
-    });
+    // document.querySelectorAll(".menu").forEach((btn) => {
+    //     btn.addEventListener("click", (e) => {
+    //         btn.classList.toggle("active");
+    //     });
+    // });
 
-    function windowWidthHome() {
+    // function windowWidthHome() {
+    //     const headerGrid = document.querySelector(".header_grid");
+    //     let menu = document.getElementById("simply-burger");
+
+    //     let header = document.querySelector(".header");
+    //     let mobileMenu = document.querySelector(".mobile_menu");
+
+    //     let menuItems = document.querySelector(".header_nav");
+
+    //     if (window.innerWidth <= 1000) {
+    //         let mobileMenuWrapper = document.createElement("div");
+    //         mobileMenuWrapper.classList.add(
+    //             "mobile_menu",
+    //             "animate__animated",
+    //             "animate__bounceOutRight"
+    //         );
+    //         if (!mobileMenu) {
+    //             header.after(mobileMenuWrapper);
+    //             mobileMenuWrapper.append(menuItems);
+    //         }
+    //         if (!menu) {
+    //             headerGrid.insertAdjacentHTML(
+    //                 "beforeend",
+    //                 `<div id="simply-burger">
+    //         			<span></span>
+    //         			<span></span>
+    //         			<span></span>
+    //         		</div>`
+    //             );
+    //         }
+    //     } else if (window.innerWidth > 1000) {
+    //         let headerMenu = document.querySelector(".header_grid .header_nav");
+    //         if (!headerMenu) {
+    //             headerGrid.append(menuItems);
+    //         }
+    //         if (mobileMenu) {
+    //             mobileMenu.remove();
+    //         }
+    //         if (menu) {
+    //             menu.remove();
+    //         }
+    //     }
+    // }
+
+    const menuCreate = () => {
         const headerGrid = document.querySelector(".header_grid");
-        let menu = document.querySelector("#simply-burger");
+        let menu = document.getElementById("simply-burger");
 
         let header = document.querySelector(".header");
         let mobileMenu = document.querySelector(".mobile_menu");
 
         let menuItems = document.querySelector(".header_nav");
-
-        if (window.innerWidth <= 1000) {
-            let mobileMenuWrapper = document.createElement("div");
-            mobileMenuWrapper.classList.add(
-                "mobile_menu",
-                "animate__animated",
-                "animate__bounceOutRight"
-            );
-            if (!mobileMenu) {
-                header.after(mobileMenuWrapper);
-                mobileMenuWrapper.append(menuItems);
-            }
-            if (!menu) {
-                headerGrid.insertAdjacentHTML(
-                    "beforeend",
-                    `<div id="simply-burger">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>`
-                );
-            }
-        } else if (window.innerWidth > 1000) {
-            let headerMenu = document.querySelector(".header_grid .header_nav");
-            if (!headerMenu) {
-                headerGrid.append(menuItems);
-            }
-            if (mobileMenu) {
-                mobileMenu.remove();
-            }
-            if (menu) {
-                menu.remove();
-            }
+        let mobileMenuWrapper = document.createElement("div");
+        mobileMenuWrapper.classList.add(
+            "mobile_menu",
+            "animate__animated",
+            "animate__bounceOutRight"
+        );
+        if (!mobileMenu) {
+            header.after(mobileMenuWrapper);
+            mobileMenuWrapper.append(menuItems);
         }
-    }
+        if (!menu) {
+            headerGrid.insertAdjacentHTML(
+                "beforeend",
+                `<div id="simply-burger">
+            			<span></span>
+            			<span></span>
+            			<span></span>
+            		</div>`
+            );
+        }
+    };
+
+    const menuHide = () => {
+        let headerMenu = document.querySelector(".header_grid .header_nav");
+        let mobileMenu = document.querySelector(".mobile_menu");
+        let menu = document.getElementById("simply-burger");
+        const headerGrid = document.querySelector(".header_grid");
+        let menuItems = document.querySelector(".header_nav");
+        if (!headerMenu) {
+            headerGrid.append(menuItems);
+        }
+        if (mobileMenu) {
+            mobileMenu.remove();
+        }
+        if (menu) {
+            menu.remove();
+        }
+    };
 
     const openMenu = () => {
         let menu = document.getElementById("simply-burger");
@@ -379,28 +426,114 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    const createMobileSlider = () => {
+        const mobileSliderPortfolioItems =
+            document.querySelectorAll(".portfolio_item");
+        let portfolioContent = document.querySelector(".portfolio_content");
+        let slider = document.querySelector(".mobile_slider");
+        if (portfolioContent) {
+            if (!slider) {
+                let sliderSwiper = document.createElement("div");
+                let sliderWrapper = document.createElement("div");
+                let sliderPagination = document.createElement("div");
+                sliderPagination.classList.add("swiper-pagination");
+                sliderSwiper.classList.add("swiper", "mobile_slider");
+                sliderWrapper.classList.add(
+                    "swiper-wrapper",
+                    "mobile_slider_wrapper"
+                );
+                portfolioContent.after(sliderSwiper);
+                sliderSwiper.append(sliderWrapper);
+                mobileSliderPortfolioItems.forEach((item) => {
+                    const swiperSlide = document.createElement("div");
+                    swiperSlide.classList.add("swiper-slide");
+                    sliderWrapper.append(swiperSlide);
+                    swiperSlide.append(item);
+                });
+                sliderWrapper.after(sliderPagination);
+            }
+            const swiper = new Swiper(".mobile_slider", {
+                slidesPerView: 1,
+            });
+        }
+    };
+
+    const hideMobileSlider = () => {
+        const mobileSliderPortfolioItems =
+            document.querySelectorAll(".portfolio_item");
+        let portfolioContent = document.querySelector(".portfolio_content");
+        let slider = document.querySelector(".mobile_slider");
+        if (slider) {
+            mobileSliderPortfolioItems.forEach((item) => {
+                item.classList.remove("swiper-slide");
+                portfolioContent.after(item);
+            });
+            slider.remove();
+        }
+    };
+
+    const transferContentAbout = () => {
+        let aboutLeadContent = document.querySelector(".aboute_lead_content");
+        let aboutSliderSection = document.querySelector(
+            ".aboute_slider_section"
+        );
+        let mobileImageLead = document.querySelector(".mobile_image_lead");
+        let mobileAboutLeadContent = document.createElement("section");
+        mobileAboutLeadContent.classList.add("mobile_about_lead_content");
+        aboutSliderSection.before(mobileAboutLeadContent);
+        let container = document.createElement("div");
+        let mobileAboutGrid = document.createElement("div");
+        mobileAboutGrid.classList.add("mobile_about_lead_grid");
+        container.classList.add("container");
+        mobileAboutLeadContent.append(container);
+        container.append(mobileAboutGrid);
+        aboutLeadContent.classList.add("mobile_lead_content");
+        aboutLeadContent.classList.remove("aboute_lead_content");
+        mobileAboutGrid.append(mobileImageLead, aboutLeadContent);
+    };
+
+    const downTransferContentAbout = () => {
+        let aboutLeadContent = document.querySelector(".mobile_lead_content");
+        let mobileImageLead = document.querySelector(".mobile_image_lead");
+        let mobileAboutLeadContent = document.querySelector(
+            ".mobile_about_lead_content"
+        );
+        aboutLeadContent.classList.add("aboute_lead_content");
+        aboutLeadContent.classList.remove("mobile_lead_content");
+        let abouteLeadGrid = document.querySelector(".aboute_lead_grid");
+        abouteLeadGrid.append(aboutLeadContent, mobileImageLead);
+        mobileAboutLeadContent.remove();
+    };
+
     const mediaQuery = window.matchMedia("(max-width: 1000px)");
     function handleTabletChange(e) {
         if (e.matches) {
-            windowWidthHome();
+            menuCreate();
             openMenu();
-            console.log("Media Query Matched!");
+        } else {
+            menuHide();
         }
     }
     mediaQuery.addListener(handleTabletChange);
     handleTabletChange(mediaQuery);
-
-    // if (window.matchMedia("(max-width: 1000px)").matches) {
-    //     console.log(1000);
-    // } else {
-    //     console.log("Не 1000");
-    // }
-
-    // if (body.getAttribute('class').includes('page-home')) {
-
-    // } else if (body.getAttribute('class').includes('page-about')) {
-    //     console.log("Страница о компании");
-    // } else if (body.getAttribute('class').includes('page-portfolio')){
-    //     console.log("Наши работы")
-    // }
+    const aboutLeadPage = window.matchMedia("(max-width: 1000px)");
+    const mobileAboutLeadPage = (event) => {
+        if (event.matches) {
+            transferContentAbout();
+        } else {
+            downTransferContentAbout();
+        }
+    };
+    aboutLeadPage.addListener(mobileAboutLeadPage);
+    mobileAboutLeadPage(aboutLeadPage);
+    const mobileQuerySlider = window.matchMedia("(max-width: 768px)");
+    function mobileSliderCreate(event) {
+        if (event.matches) {
+            createMobileSlider();
+        } else {
+            hideMobileSlider();
+        }
+    }
+    mobileQuerySlider.addListener(mobileSliderCreate);
+    mobileSliderCreate(mobileQuerySlider);
 });

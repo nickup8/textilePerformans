@@ -901,7 +901,7 @@ p {
     overflow: hidden;
     padding: 32px;
 }
-.slider_button{
+.slider_button {
     width: 52px;
     height: 52px;
     background: var(--black);
@@ -911,17 +911,17 @@ p {
     transition: background 0.3s;
 }
 
-.slider_button:hover{
+.slider_button:hover {
     background: var(--accent);
     cursor: pointer;
 }
 
-.slider_button:disabled{
+.slider_button:disabled {
     cursor: auto;
     background: #999999;
 }
 
-.slider_button_cta{
+.slider_button_cta {
     width: 100%;
 }
 
@@ -960,8 +960,6 @@ p {
     border-top: 2px solid var(--divider);
     margin-top: 32px;
 }
-
-
 
 /* contacts */
 
@@ -1376,14 +1374,17 @@ p {
 .mobile_menu.active {
     display: block;
 }
+
+.mobile_image_lead {
+    display: none;
+}
 @media (max-width: 1200px) {
-    .slider_navigation{
+    .slider_navigation {
         left: 60%;
     }
     .slider_works_slide_content {
         padding: 16px;
     }
-
 }
 @media (max-width: 1000px) {
     .portfolio_grid {
@@ -1489,14 +1490,41 @@ p {
     .contacts_page_content {
         grid-column: span 5;
     }
-    .slider_works_slide_content{
+    .slider_works_slide_content {
         grid-column: span 4;
     }
-    .slider_works_slide_images{
+    .slider_works_slide_images {
         grid-column: span 8;
     }
     .slider_navigation {
         left: 50%;
+    }
+
+    .mobile_image_lead {
+        width: 100%;
+        max-width: 300px;
+        background-color: #000;
+        display: block;
+        height: 420px;
+        aspect-ratio: 3/4;
+        margin-bottom: 32px;
+    }
+
+    .mobile_image_lead > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .aboute_lead {
+        display: none;
+    }
+
+    .mobile_about_lead_grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
     }
 }
 @media (max-width: 850px) {
@@ -1507,10 +1535,9 @@ p {
         left: 80%;
     }
 
-    .slider_works_slide_content{
+    .slider_works_slide_content {
         display: none;
     }
-
 }
 @media (max-width: 768px) {
     .h1 {
@@ -1682,10 +1709,19 @@ p {
     .slider_navigation {
         left: 75%;
     }
-
+    .mobile_slider {
+        max-width: 100%;
+    }
+    .portfolio_item {
+        height: 340px;
+    }
+    .mobile_about_lead_grid {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-@media(max-width: 550px) {
+@media (max-width: 550px) {
     .slider_navigation {
         left: 70%;
     }
@@ -1758,6 +1794,9 @@ p {
     }
     .slider_navigation {
         display: none;
+    }
+    .portfolio_item {
+        height: 230px;
     }
 }
 
