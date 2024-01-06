@@ -480,7 +480,8 @@ window.addEventListener("DOMContentLoaded", () => {
         let mobileImageLead = document.querySelector(".mobile_image_lead");
         let mobileAboutLeadContent = document.createElement("section");
         mobileAboutLeadContent.classList.add("mobile_about_lead_content");
-        aboutSliderSection.before(mobileAboutLeadContent);
+        if(aboutSliderSection) {
+            aboutSliderSection.before(mobileAboutLeadContent);
         let container = document.createElement("div");
         let mobileAboutGrid = document.createElement("div");
         mobileAboutGrid.classList.add("mobile_about_lead_grid");
@@ -490,6 +491,7 @@ window.addEventListener("DOMContentLoaded", () => {
         aboutLeadContent.classList.add("mobile_lead_content");
         aboutLeadContent.classList.remove("aboute_lead_content");
         mobileAboutGrid.append(mobileImageLead, aboutLeadContent);
+        }
     };
 
     const downTransferContentAbout = () => {
@@ -498,11 +500,13 @@ window.addEventListener("DOMContentLoaded", () => {
         let mobileAboutLeadContent = document.querySelector(
             ".mobile_about_lead_content"
         );
-        aboutLeadContent.classList.add("aboute_lead_content");
+        if(aboutLeadContent) {
+            aboutLeadContent.classList.add("aboute_lead_content");
         aboutLeadContent.classList.remove("mobile_lead_content");
         let abouteLeadGrid = document.querySelector(".aboute_lead_grid");
         abouteLeadGrid.append(aboutLeadContent, mobileImageLead);
         mobileAboutLeadContent.remove();
+        }
     };
 
     const mediaQuery = window.matchMedia("(max-width: 1000px)");

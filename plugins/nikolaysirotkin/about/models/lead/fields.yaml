@@ -18,7 +18,13 @@ fields:
         type: text
     bg_image:
         label: 'Фоновое изображение'
-        mode: file
+        mode: image
         span: auto
         type: mediafinder
         comment: 'Не рекомендуется изменять. Либо необходимо подобрать подходящее изображение. Размер 1920х800 px'
+    mobile_img:
+        label: 'Изображение для мобильной версии'
+        mode: image
+        span: auto
+        type: mediafinder
+        comment: 'Размер 300х420px'

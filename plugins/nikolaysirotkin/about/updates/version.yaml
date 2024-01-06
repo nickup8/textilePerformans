@@ -24,3 +24,6 @@
 1.0.9:
     - 'Updated table nikolaysirotkin_about_info'
     - builder_table_update_nikolaysirotkin_about_info_4.php
+1.0.10:
+    - 'Updated table nikolaysirotkin_about_leads'
+    - builder_table_update_nikolaysirotkin_about_leads.php
