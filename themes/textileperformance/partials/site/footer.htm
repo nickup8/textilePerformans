@@ -128,13 +128,14 @@
 			<div class="slider_overlay"></div>
 		</div>
         <!-- Scripts -->
-        <script src="{{'assets/libs/swiper/swiper-bundle.min.js' | theme}}"></script>
+
         <script src="{{ [
             '@jquery',
             '@framework',
             '@framework.extras',
-            'assets/js/main.js',
         ] | theme }}"></script>
+        <script src="{{'assets/libs/swiper/swiper-bundle.min.js' | theme}}"></script>
+        <script src="{{'assets/js/main.js' | theme}}"></script>
         {% scripts %}
 
         {% flash %}

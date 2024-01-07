@@ -1,23 +1,28 @@
 
-<form class="modal_form" data-request="onSend">
+<form class="modal_form" data-request="onSend" data-request-validate data-request-flash>
     <input
         class="modal_form_input"
+        title="Ваше имя"
         type="text"
         placeholder="Ваше имя"
         name="name"
     />
+    <span data-validate-for="name"></span>
     <input
         class="modal_form_input"
+        title="Номер телефона"
         type="text"
         placeholder="Ваш номер телефона"
         name="phone"
     />
+    <span data-validate-for="phone"></span>
 
     <div class="form_button">
-        <button type="submit" class="button button_modal">Отправить</button>
+        <button type="submit" class="button button_modal" data-attach-loading>Отправить</button>
         <div class="form_button_conf">
             Нажимая на кнопку, Вы принимаете
             <a href="#">условия обработки персональных данных</a>
         </div>
     </div>
+
 </form>

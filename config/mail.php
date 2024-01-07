@@ -35,14 +35,6 @@ return [
     |
     */
 
-    'driver' => 'smtp',
-    'host' => 'smtp.yandex.ru',
-    'port' => 993,
-    'username' => 'nickup8@yandex.ru',
-    'password' => 'xzbvyhoklncisrtk',
-
-
-
     'mailers' => [
         'smtp' => [
             'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
